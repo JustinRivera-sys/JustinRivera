@@ -129,7 +129,7 @@ ul {
   padding-left: 1.2em;
 }
 
-/* Responsive */
+/* Responsive: Pantallas grandes */
 @media (min-width: 800px) {
   .et-hero-tabs h1,
   .et-slide h1 {
@@ -146,6 +146,7 @@ ul {
   }
 }
 
+/* Responsive: Pantallas pequeñas */
 @media (max-width: 768px) {
   .et-hero-tabs {
     padding: 1em 1em;
@@ -158,7 +159,7 @@ ul {
   .et-hero-tabs h1,
   .et-slide h1 {
     font-size: 1.8rem;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
     text-align: center;
   }
 
@@ -175,6 +176,7 @@ ul {
     height: auto;
     position: static;
     box-shadow: none;
+    padding: 0;
   }
 
   .et-hero-tab {
@@ -202,5 +204,10 @@ ul {
   .social-links a {
     display: block;
     margin: 8px 0;
+  }
+
+  ul {
+    font-size: 0.95rem;
+    padding-left: 1em;
   }
 }
