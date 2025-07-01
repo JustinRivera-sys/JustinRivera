@@ -13,7 +13,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background: #eee;
   text-align: center;
@@ -147,14 +147,60 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .et-hero-tabs {
+    padding: 1em 1em;
+  }
+
+  .et-slide {
+    padding: 2em 1em;
+  }
+
   .et-hero-tabs h1,
   .et-slide h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.5rem;
+    text-align: center;
   }
 
   .et-hero-tabs h3,
   .et-slide h3 {
+    font-size: 0.95rem;
+    letter-spacing: 0.05rem;
+    padding: 0 0.5em;
+    text-align: left;
+  }
+
+  .et-hero-tabs-container {
+    flex-direction: column;
+    height: auto;
+    position: static;
+    box-shadow: none;
+  }
+
+  .et-hero-tab {
+    font-size: 1rem;
+    padding: 1em 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+  }
+
+  .et-hero-tab-slider {
+    display: none;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    margin-top: 15px;
+  }
+
+  .download-btn {
+    padding: 10px;
     font-size: 0.9rem;
-    padding: 0 1em;
+  }
+
+  .social-links a {
+    display: block;
+    margin: 8px 0;
   }
 }
