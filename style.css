@@ -1,5 +1,8 @@
 body {
   font-family: "Century Gothic", "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #000;
 }
 
 a {
@@ -14,38 +17,33 @@ a {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  position: relative;
-  background: #eee;
   text-align: center;
-  padding: 0 2em;
+  padding: 2em 1em;
+  background-color: #f5f5f5;
 }
 
 .et-hero-tabs h1,
 .et-slide h1 {
-  font-size: 2rem;
-  margin: 0;
-  letter-spacing: 1rem;
+  font-size: 2.5rem;
+  margin: 0.5em 0;
+  letter-spacing: 0.1rem;
 }
 
-.et-hero-tabs h3,
-.et-slide h3 {
-  font-size: 1rem;
-  letter-spacing: 0.2rem;
-  opacity: 0.6;
+.et-slide p,
+.et-slide ul {
   max-width: 800px;
-  text-align: left;
   line-height: 1.6;
+  text-align: left;
 }
 
 .et-hero-tabs-container {
   display: flex;
-  flex-direction: row;
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 70px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 10;
 }
 
@@ -55,51 +53,46 @@ a {
 }
 
 .et-hero-tab {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex: 1;
-  color: #000;
-  letter-spacing: 0.1rem;
-  transition: all 0.5s ease;
-  font-size: 0.8rem;
+  text-align: center;
+  padding: 1em;
   font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .et-hero-tab:hover {
-  background: #ddd !important;
-  color: #000 !important;
-  transition: all 0.3s ease;
+  background-color: #ddd;
+}
+
+.et-hero-tab.active {
+  border-bottom: 3px solid #000;
 }
 
 .et-hero-tab-slider {
   position: absolute;
   bottom: 0;
-  width: 0;
-  height: 6px;
-  background: #000 !important;
-  transition: left 0.3s ease;
+  height: 4px;
+  background: #000;
+  transition: left 0.3s ease, width 0.3s ease;
 }
 
-/* Foto perfil */
 .profile-photo {
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  margin-top: 20px;
   object-fit: cover;
+  margin: 20px 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Botón descarga CV */
 .download-btn {
-  display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
   background: #000;
   color: #fff;
   border-radius: 5px;
-  text-decoration: none;
+  font-weight: bold;
   transition: background 0.3s ease;
 }
 
@@ -107,107 +100,39 @@ a {
   background: #333;
 }
 
-/* Enlaces redes */
 .social-links {
   margin-top: 15px;
 }
 
 .social-links a {
   margin: 0 10px;
-  text-decoration: none;
-  color: #000;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  text-decoration: underline;
+  color: #555;
 }
 
-/* Listas */
-ul {
-  text-align: left;
-  padding-left: 1.2em;
-}
-
-/* Responsive: Pantallas grandes */
-@media (min-width: 800px) {
-  .et-hero-tabs h1,
-  .et-slide h1 {
-    font-size: 3rem;
-  }
-
-  .et-hero-tabs h3,
-  .et-slide h3 {
-    font-size: 1rem;
-  }
-
-  .et-hero-tab {
-    font-size: 1rem;
-  }
-}
-
-/* Responsive: Pantallas pequeñas */
+/* Responsive */
 @media (max-width: 768px) {
-  .et-hero-tabs {
-    padding: 1em 1em;
-  }
-
-  .et-slide {
-    padding: 2em 1em;
-  }
-
-  .et-hero-tabs h1,
-  .et-slide h1 {
-    font-size: 1.8rem;
-    letter-spacing: 0.2rem;
-    text-align: center;
-  }
-
-  .et-hero-tabs h3,
-  .et-slide h3 {
-    font-size: 0.95rem;
-    letter-spacing: 0.05rem;
-    padding: 0 0.5em;
-    text-align: left;
-  }
-
   .et-hero-tabs-container {
     flex-direction: column;
     height: auto;
     position: static;
-    box-shadow: none;
-    padding: 0;
   }
 
   .et-hero-tab {
-    font-size: 1rem;
-    padding: 1em 0;
-    width: 100%;
+    padding: 1em;
     border-top: 1px solid #ccc;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
   }
 
   .et-hero-tab-slider {
     display: none;
-  }
-
-  .profile-photo {
-    width: 120px;
-    height: 120px;
-    margin-top: 15px;
-  }
-
-  .download-btn {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-
-  .social-links a {
-    display: block;
-    margin: 8px 0;
-  }
-
-  ul {
-    font-size: 0.95rem;
-    padding-left: 1em;
   }
 }
